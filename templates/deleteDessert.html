@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<h2> Are you sure you want to delete {{dessert.name}}? </h2>
+<br><br>
+
+<form action="#" method = 'post'>
+
+	<button type="submit" class="btn btn-default delete" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+	<a href = '{{url_for('showDesserts')}}'></a>
+	<button class="btn btn-default" value="back" onClick="history.go(-1);return false;">
+	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	<!-- <input action="action" onclick="window.history.go(-1); return false;" type="button" value="Back" /> -->
+	Cancel</button>
+	
+
+</form>
+
+{% endblock %}
